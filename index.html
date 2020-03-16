@@ -48,6 +48,16 @@ var number = document.getElementById("number");
 var length = document.getElementById("length");
 
 // When the user starts to type something inside the password field
+myInput2.onkeyup = function() {
+  // Validate length
+  if(myInput2.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
 myInput.onkeyup = function() {
   // Validate lowercase letters
   var lowerCaseLetters = /[a-z]/g;
@@ -78,13 +88,6 @@ myInput.onkeyup = function() {
   } 
   // Validate length
   if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-  if(myInput2.value.length >= 8) {
     length.classList.remove("invalid");
     length.classList.add("valid");
   } else {
