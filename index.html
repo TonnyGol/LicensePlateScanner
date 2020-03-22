@@ -29,10 +29,10 @@ input[type=submit] {
 
 <div class="container">
   <form action="/action_page.php">
-    <label for="usrname" text-align: center>Username</label>
-    <input type="text" id="usrname" name="usrname" pattern="{8,}" title="Must be 8 or more length" required>
+    <label for="usrname" text-align="center">Username</label>
+    <input type="username" id="usrname" name="usrname" pattern="{8,}" title="Must be 8 or more length" required>
 	  <div></div>
-    <label for="psw" text-align: center>Password</label>
+    <label for="psw" text-align="center">Password</label>
     <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
     
     <input type="submit" value="Submit">
@@ -47,7 +47,7 @@ var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 	
-nameInput2.onkeypress = function2() {
+nameInput2.onkeyup = function2() {
    // Validate length
   if(myInput.value.length >= 8) 
   {
