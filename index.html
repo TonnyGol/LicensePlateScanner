@@ -2,32 +2,57 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+button {
+  background-color: #33C3FF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+div
+{
+    text-align: center;
+}​
+</style>
 </head>
 <body>
 
-<h3>Login Page</h3>
-<p>Put in Username and Password</p>
-
-<div class="container">
-  <form>
-    <label for="usrname">Username</label>
-    <input type="text" id="usrname" name="usrname">
-	  <div></div>
-    <label for="psw">Password</label>
-    <input type="text" id="psw" name="psw">
-    
-    <button type="submit" value="Submit">
-  </form>
+<div>
+	<h2>Login Page</h2>
+	<p>Put in Username and Password</p>
 </div>
+<form name="loginForm" method="post" action="login.php">
+	<div>
+		<p>Username</p>
+		<input type="text" align="center" id="usrname" name="usrname">
+		<div></div>
+		<p>Password</p>
+		<input type="text" align="center" id="psw" name="psw">
+		<div></div>
+		<button onclick="return wrongLogin(this.form)" class="button">Login</button>
+	</div>
+</form>
 				
-<script>
-var passInput = document.getElementById("psw");
-var nameInput2 = document.getElementById("usrname");
-	
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
+<script language="javascript">
+
+function wrongLogin(form){
+	if(form.usrname.value == "tonny" && form.psw.value == "1234")
+	{
+		alert("Login ok")
+		return true;
+	}
+	else
+	{
+		alert("Error, Wrong username or password")
+		return true;
+	}
+}
 	
 
 </script>
