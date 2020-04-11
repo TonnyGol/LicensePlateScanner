@@ -44,11 +44,15 @@ div
 function wrongLogin(form){
 	if(form.usrname.value == "tonny" && form.psw.value == "1234")
 	{
-		let alret = confirm("Login Ok");
-		if(alert)
+		if (confirm("Login Ok")) 
 		{
-			window.location.href = 'https://www.youtube.com/';
-		}
+    			window.location.href = 'https://www.youtube.com/';
+  		} 
+		else 
+		{
+    			txt = "You pressed Cancel!";
+  		}
+			
 		
 	}
 	else
