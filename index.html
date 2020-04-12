@@ -21,7 +21,7 @@ div
 }​
 </style>
 </head>
-<body>
+<body bgcolor="#AEB9BB">
 
 <div>
 	<h2>Login Page</h2>
@@ -35,7 +35,7 @@ div
 		<p>Password</p>
 		<input type="text" align="center" id="psw" name="psw">
 		<div></div>
-		<button onclick="return wrongLogin(this.form)" class="button">Submit</button>
+		<button onclick="return wrongLogin(this.form)" class="button">Login</button>
 	</div>
 </form>
 				
@@ -44,12 +44,11 @@ div
 function wrongLogin(form){
 	if(form.usrname.value == "tonny" && form.psw.value == "1234")
 	{
-		window.location = 'https://www.youtube.com/';
-		
+		alert("Login OK")
 	}
 	else
 	{
-		
+		alert("Login BAD, TRY AGAIN.")
 		return true;
 	}
 }
