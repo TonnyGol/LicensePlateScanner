@@ -27,7 +27,8 @@ div
 	<h2>Login Page</h2>
 	<p>Put in Username and Password</p>
 </div>
-<form name="loginForm" method="post" action="https://tonnygol.github.io/LicensePlateScanner/new.py">
+	
+<form method="post" action="">
 	<div>
 		<p>Username</p>
 		<input type="text" align="center" id="usrname" name="usrname">
@@ -41,7 +42,8 @@ div
 				
 <script language="javascript">
 
-function wrongLogin(form){
+function wrongLogin(form)
+{
 	if(form.usrname.value == "tonny" && form.psw.value == "1234")
 	{
 		alert("Login OK")
@@ -54,7 +56,6 @@ function wrongLogin(form){
 	}
 }
 	
-
 </script>
 
 </body>
