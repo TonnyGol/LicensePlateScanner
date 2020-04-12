@@ -1,9 +1,8 @@
-import cgi, cgitb
+from flask import request, redirect
 
-
-form = cgi.FieldStorage()
-
-first_name = form.getvalue('usrname')
-last_name  = form.getvalue('psw')
-
-print(first_name , last_name)
+@app.route('https://tonnygol.github.io/LicensePlateScanner/new.py', methods = ['POST'])
+def signup():
+    userName = request.form['usrname']
+    passWord = request.form['psw']
+    print("The username and password are" + userName + passWord)
+    return redirect('https://tonnygol.github.io/LicensePlateScanner/page.html')
