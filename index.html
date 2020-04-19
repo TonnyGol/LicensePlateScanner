@@ -37,24 +37,24 @@ div
 		<input type="text" align="center" id="psw" name="psw">
 		<div></div>
 		<input type=button onClick="location.href='https://tonnygol.github.io/LicensePlateScanner/page.html'" value='click here'>
-		<button onclick="wrongLogin(this.form)" class="button">Login</button>
+		<input type="button" value="Login"  onclick="javascript:validate()" />
 	</div>
 </form>
 				
 <script language="javascript">
-	
-var username = document.getElementById("usrname").innerHTML;
-var password = document.getElementById("psw").innerHTML;	
-function wrongLogin(username, password)
+		
+function validate()
 {
-	if(username.value == "tonny" && password.value == "1234")
-	{
-		alert("Login OK")
-	}
-	else
-	{
-		alert("Login BAD, TRY AGAIN.")
-	}
+	if(   document.getElementById("usrname").value == "1234"
+       && document.getElementById("psw").value == "1234" )
+    {
+        alert( "validation succeeded" );
+        location.href="https://tonnygol.github.io/LicensePlateScanner/page.html";
+    }
+    else
+    {
+        alert( "validation failed" );
+    }
 }
 	
 </script>
