@@ -36,8 +36,7 @@ div
 		<p>Password</p>
 		<input type="text" align="center" id="psw" name="psw">
 		<div></div>
-		<input type=button onClick="location.href='https://tonnygol.github.io/LicensePlateScanner/page.html'" value='click here'>
-		<input type="button" value="Login"  onclick="javascript:validate()" />
+		<input type="button" class="button" value="Login"  onclick="javascript:validate()" />
 	</div>
 </form>
 				
@@ -45,7 +44,7 @@ div
 		
 function validate()
 {
-	if(   document.getElementById("usrname").value == "1234"
+	if(   document.getElementById("usrname").value == "tonny"
        && document.getElementById("psw").value == "1234" )
     {
         alert( "validation succeeded" );
